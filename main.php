@@ -4,10 +4,16 @@ $list = array();
 echo "How many times you will input  : ";
 $input = rtrim(fgets(STDIN));
 
+if ($input == 0) {
+    return false;
+}
+
 for ($i=1; $i <= $input ; $i++) { 
     echo "enter value " . $i. " : ";
-    $data = rtrim(fgets(STDIN));
-    $list[] = $data;
+    $data = fscanf(STDIN, "%d\n", $number);
+    if ($data == 1) {
+        $list[] = $number;
+    }
 }
 
 $n = sizeof($list);
