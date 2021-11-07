@@ -30,4 +30,6 @@ for($i = 0; $i < $n; $i++)
     }
 }
 
+sort($list);
+
 print_r($list);
